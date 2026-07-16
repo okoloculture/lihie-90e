@@ -3,7 +3,6 @@ document.addEventListener('alpine:init', () => {
         // поля формы
         name: '',
         status: '',
-        lateTime: '',
         company: 'Один',
         guest: '',
         song: '',
@@ -46,7 +45,6 @@ document.addEventListener('alpine:init', () => {
             const payload = {
                 name: this.name,
                 status: this.status,
-                lateTime: this.lateTime,
                 company: this.company,
                 guest: this.guest,
                 song: this.song,
@@ -77,7 +75,6 @@ document.addEventListener('alpine:init', () => {
             this.error = false;
             this.name = '';
             this.status = '';
-            this.lateTime = '';
             this.company = 'Один';
             this.guest = '';
             this.song = '';

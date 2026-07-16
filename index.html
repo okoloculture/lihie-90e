@@ -180,21 +180,10 @@
                     <span>😎 Приду</span>
                 </label>
                 <label>
-                    <input type="radio" name="status" value="Позже" x-model="status">
-                    <span>⌛ Приду позже</span>
-                </label>
-                <label>
                     <input type="radio" name="status" value="Не приду" x-model="status">
                     <span>😭 Не приду</span>
                 </label>
             </div>
-        </div>
-
-        <div id="lateBox" x-show="status === 'Позже'" x-transition x-cloak>
-            <label>
-                Во сколько приедешь?
-                <input type="time" id="lateTime" x-model="lateTime" :required="status === 'Позже'">
-            </label>
         </div>
 
         <div class="block">
