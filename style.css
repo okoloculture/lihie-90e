@@ -370,22 +370,23 @@ section h2 {
     max-width: 1000px;
 }
 
-/* Кладка в колонки — фото целиком, без обрезки лиц */
+/* Ровная сетка: одинаковые карточки, ряды выровнены, фото целиком (без обрезки лиц) */
 .refs-grid {
-    column-count: 3;
-    column-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
 .refs-grid figure {
-    break-inside: avoid;
-    margin: 0 0 24px;
     text-align: center;
 }
 
 .refs-grid img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: contain;
+    background: rgba(18, 3, 8, 0.55);
     border-radius: 6px;
     border: 2px solid var(--gold-dark);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.55);
@@ -399,13 +400,17 @@ section h2 {
 
 @media (max-width: 760px) {
     .refs-grid {
-        column-count: 2;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 460px) {
     .refs-grid {
-        column-count: 1;
+        grid-template-columns: 1fr;
+    }
+
+    .refs-grid img {
+        height: 340px;
     }
 }
 
